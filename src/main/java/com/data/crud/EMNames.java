@@ -27,10 +27,11 @@ public class EMNames {
             properties.put("javax.persistence.jdbc.password", "postgres");
             properties.put("javax.persistence.schema-generation.database.action", "create");
         } else { //se a variavel de ambiente foi criada, indica que o projeto está alocado no heroku
-               properties.put("javax.persistence.jdbc.url", "jdbc:postgresql://ec2-184-73-202-79.compute-1.amazonaws.com:5432/d27dm10t2iscbc?sslmode=require");
-               properties.put("javax.persistence.jdbc.user", "okdvfyabceaqmz");
+            System.out.println("###### ambiente heroku #################");
+               properties.put("javax.persistence.jdbc.url", "postgres://ngaqdpclsxkvls:8164d310bfc9c9e37f8cfd6759ac8baad7820b0419265ca604b4dc730d6242f4@ec2-52-86-33-50.compute-1.amazonaws.com:5432/d950l53bi874fa?sslmode=require");
+               properties.put("javax.persistence.jdbc.user", "ngaqdpclsxkvls");
                properties.put("javax.persistence.jdbc.driver", "org.postgresql.Driver");
-               properties.put("javax.persistence.jdbc.password", "037e654cd0b0f5b25b3973734a99cc9b3cec28a354eee53d92d742e0e4737ce3");
+               properties.put("javax.persistence.jdbc.password", "8164d310bfc9c9e37f8cfd6759ac8baad7820b0419265ca604b4dc730d6242f4");
             //obter demais variaveis e configurar persistence.xml
             /*String jdbc_database_url = System.getenv("JDBC_DATABASE_URL");
             String jdbc_database_username = System.getenv("JDBC_DATABASE_USERNAME");
