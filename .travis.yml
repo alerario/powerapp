@@ -1,0 +1,17 @@
+services:
+- postgresql
+#before_script:
+#- psql -c 'create database teste;' -U postgres
+#- psql -U postgres -d teste -f script/database/create_tables.sql
+#- psql -U postgres -d teste -f script/database/insert_records.sql
+language: java
+jdk:
+- openjdk11
+script: mvn clean verify -DskipTests=false -DskipITs=false -DskipSTs=false
+#deploy:
+#  provider: heroku
+#  api_key:
+#    secure: qkZ033WfLFbFHP5sgVZsMUFJEFDAvvZuUiuwiBGFWkt/JGPaSJBQTOo65uY6PpzCrtrXlDYFji0yvscr+XXDhU3p7NaEvaxwonsBfjkdMbEnAIksv9G+5vNa+0FJt616QYHR9FcZW5/FdaCQG6smq1SOjb3IseYG98d84feksZ2a0II5zQlj44aFnENJHrzBsTofBnaucO7hEXssr15AZYa8r5dcXAyx/W7PJX6KgWwfg/KQUZfqVU+I3JeqnNbSJJMxrDH4CGGJqhH/lVX8ojjYyxgHRmrX70fyrOtcoTsB8yPLe3unU9HZxRT6M/zW1BkoJa5Jfl0silRZryZ2mVffpVvrDw+oKv40YNODnTEOnfq/bnCoule8rcTVqMQEIB+rBwk7qKgjN/OLZ3eGlYSKFeuCK+xNjX4uYgD0GQ3sveTswWe9O8JwuEvTnowRof7cjOe+IJ6jFNnmcENVZBu3LI8CRXzARXI+uSaZeVl6TUrNmkhpPDLMgtFQiN7QOpG6JAsaREEOtxiR1T7zuiXVkFyMn+T64r93T3yocIDh1WVhXKCjHkSeunyn668wFJrzEqw2kXTxBcIy9msrQsqvesOk0sYL3JCLiq8m0kzEaWFJT1CoEeXq89mh5vHJjc0uOZy9UfeJbBMEp3fja7h7OkIZappIUBLJZujmkl4=
+#  app: jsfpaheroku
+#  on:
+#    repo: alerario/jsfpaheroku
