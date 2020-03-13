@@ -1,17 +1,13 @@
 services:
 - postgresql
-#before_script:
-#- psql -c 'create database teste;' -U postgres
-#- psql -U postgres -d teste -f script/database/create_tables.sql
-#- psql -U postgres -d teste -f script/database/insert_records.sql
 language: java
 jdk:
 - openjdk11
 script: mvn clean verify -DskipTests=false -DskipITs=false -DskipSTs=false
 deploy:
   provider: heroku
-#  api_key:
-#    secure: qkZ033WfLFbFHP5sgVZsMUFJEFDAvvZuUiuwiBGFWkt/JGPaSJBQTOo65uY6PpzCrtrXlDYFji0yvscr+XXDhU3p7NaEvaxwonsBfjkdMbEnAIksv9G+5vNa+0FJt616QYHR9FcZW5/FdaCQG6smq1SOjb3IseYG98d84feksZ2a0II5zQlj44aFnENJHrzBsTofBnaucO7hEXssr15AZYa8r5dcXAyx/W7PJX6KgWwfg/KQUZfqVU+I3JeqnNbSJJMxrDH4CGGJqhH/lVX8ojjYyxgHRmrX70fyrOtcoTsB8yPLe3unU9HZxRT6M/zW1BkoJa5Jfl0silRZryZ2mVffpVvrDw+oKv40YNODnTEOnfq/bnCoule8rcTVqMQEIB+rBwk7qKgjN/OLZ3eGlYSKFeuCK+xNjX4uYgD0GQ3sveTswWe9O8JwuEvTnowRof7cjOe+IJ6jFNnmcENVZBu3LI8CRXzARXI+uSaZeVl6TUrNmkhpPDLMgtFQiN7QOpG6JAsaREEOtxiR1T7zuiXVkFyMn+T64r93T3yocIDh1WVhXKCjHkSeunyn668wFJrzEqw2kXTxBcIy9msrQsqvesOk0sYL3JCLiq8m0kzEaWFJT1CoEeXq89mh5vHJjc0uOZy9UfeJbBMEp3fja7h7OkIZappIUBLJZujmkl4=
- app: powerappz
- on:
+  api_key:
+    secure: Widn8RnkVmfrEM/XuFwsJSNjV5prxesM/WjVvFnBKTzlMryXnXtPHYn6BQt0XnkGm/IhN1pkpHyVAVhJfdseam7zRBfs7J3auJB3cegrhC+OlS2EAzuWstKKlEepoFOf6MJZGhmwHiJNMR1Mt9RQAvpalCrInbD8xWI0c9epUHG+JIvG4i3TsGKmusJtErmcoVjv9mmm9LfYfnwgplsb3uGf+wsdihOb9C71IYzpfXrwlFk31A2H4muFJ8w/228X6JSf3Xnhxc6nlq9sESY0GIyRiGf61iU5uwQmsaPjveYWvLA6DffVMFZMGkSLhLAKJTXoERxbIT1Ep1GeyWOBSdU53Hq0slJPpyRPf6YR2xgcCLb5PRqwtjS69Wfet3ICk0QMt2XvJEwTCmGe2AhLkF8FUVfc8bRu9aA60ay+l1t4ivxaBX4dkAAINg6lujh5q9Q00hyk91AZoPbC1OU5FVUox5z9+5zWYxUsyraPdo7TgDzF3DK/6pevjKpfD/ntBQxDjiW1nLVzbz7TJfr/Ismawn9boe9Pzpw/bMLYL0bnUYeE+1ZnL7khZ4snekRfK8ovIs8A0lYEp7LYZ8wvlbHHrb7TVc2kV6hp6NeoNsFiQ+Kz/Il3+rkt999t5ZZZ7gT+1X0HJ3woh9odztsR/Pv1YOb/bxRtaePu5JL8X5c=
+  app: powerappz
+  on:
     repo: alerario/powerapp
