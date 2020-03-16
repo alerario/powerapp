@@ -1,1 +1,1 @@
-web: java  -jar target/endorsed/webapp-runner.jar --port $PORT  target/*.war
+web:  java -jar lib/payara-micro-5.201.jar --deploy target/PowerAPP-2.0-SNAPSHOT.war --port $PORT
