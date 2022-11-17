@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 package com.web;
-
+//teste
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
-import java.io.Serializable;
+import java.io.Serializabled;
 
 /**
  *
