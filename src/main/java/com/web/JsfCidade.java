@@ -7,7 +7,7 @@ package com.web;
 //teste
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
-import java.io.Serializabled;
+import java.io.Serializable;
 
 /**
  *
